@@ -1,0 +1,34 @@
+.gallery {
+  width: 1128px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 24px;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  list-style-type: none;
+  width: 360px;
+  height: 200px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.gallery-image {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.basicLightbox__content img {
+  border-radius: 10px; /* Закруглення країв */
+}
