@@ -1,8 +1,7 @@
-// Описаний в документації
+// Описаний в документації імпорт
 import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
-console.log('SimpleLightbox styles imported');
 
 const images = [
   {
@@ -71,6 +70,7 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('.gallery');
+
 function createMarkup(arr) {
   return arr
     .map(
@@ -79,24 +79,20 @@ function createMarkup(arr) {
     <img
       class="gallery-image"
       src="${image.preview}"
-      data-source="${image.original}"
       alt="${image.description}"
     />
   </a>
-</li>
-`
+</li>`
     )
     .join('');
 }
 
 galleryEl.innerHTML = createMarkup(images);
 
-document.addEventListener('DOMContentLoaded', function () {
-  new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-    scrollZoom: false,
-  });
+new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  scrollZoom: false,
 });
